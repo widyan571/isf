@@ -1,0 +1,1462 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://audit.services.promise3.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="TableLog00ServicesImplService" targetNamespace="http://audit.services.promise3.com/">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://audit.services.promise3.com/" elementFormDefault="unqualified" targetNamespace="http://audit.services.promise3.com/" version="1.0">
+
+  <xs:element name="getAuditTrailListWithKeyword" type="tns:getAuditTrailListWithKeyword"/>
+
+  <xs:element name="getAuditTrailListWithKeywordResponse" type="tns:getAuditTrailListWithKeywordResponse"/>
+
+  <xs:element name="getTableLog" type="tns:getTableLog"/>
+
+  <xs:element name="getTableLogByIdUser" type="tns:getTableLogByIdUser"/>
+
+  <xs:element name="getTableLogByIdUserResponse" type="tns:getTableLogByIdUserResponse"/>
+
+  <xs:element name="getTableLogByRolePanitia" type="tns:getTableLogByRolePanitia"/>
+
+  <xs:element name="getTableLogByRolePanitiaResponse" type="tns:getTableLogByRolePanitiaResponse"/>
+
+  <xs:element name="getTableLogByRoleVendor" type="tns:getTableLogByRoleVendor"/>
+
+  <xs:element name="getTableLogByRoleVendorResponse" type="tns:getTableLogByRoleVendorResponse"/>
+
+  <xs:element name="getTableLogByUserId" type="tns:getTableLogByUserId"/>
+
+  <xs:element name="getTableLogByUserIdResponse" type="tns:getTableLogByUserIdResponse"/>
+
+  <xs:element name="getTableLogList" type="tns:getTableLogList"/>
+
+  <xs:element name="getTableLogListByPengadaanPk" type="tns:getTableLogListByPengadaanPk"/>
+
+  <xs:element name="getTableLogListByPengadaanPkResponse" type="tns:getTableLogListByPengadaanPkResponse"/>
+
+  <xs:element name="getTableLogListResponse" type="tns:getTableLogListResponse"/>
+
+  <xs:element name="getTableLogListforPengadaan" type="tns:getTableLogListforPengadaan"/>
+
+  <xs:element name="getTableLogListforPengadaanResponse" type="tns:getTableLogListforPengadaanResponse"/>
+
+  <xs:element name="getTableLogResponse" type="tns:getTableLogResponse"/>
+
+  <xs:complexType name="getTableLog">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getTableLogResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:tableLog00"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="tableLog00">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="inisialisasi00" type="tns:inisialisasi00"/>
+      <xs:element minOccurs="0" name="keteranganActionType" type="xs:string"/>
+      <xs:element minOccurs="0" name="role00" type="tns:role00"/>
+      <xs:element minOccurs="0" name="tblLogActionType" type="xs:int"/>
+      <xs:element minOccurs="0" name="tblLogNamaKolom" type="xs:string"/>
+      <xs:element minOccurs="0" name="tblLogNamaTable" type="xs:string"/>
+      <xs:element minOccurs="0" name="tblLogNilaiAwal" type="xs:string"/>
+      <xs:element minOccurs="0" name="tblLogNilaiBaru" type="xs:string"/>
+      <xs:element minOccurs="0" name="tblLogPFk" type="xs:int"/>
+      <xs:element minOccurs="0" name="tblLogPk" type="xs:int"/>
+      <xs:element minOccurs="0" name="tblLogUserId" type="xs:int"/>
+      <xs:element minOccurs="0" name="tblLogwaktu" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="ULogin00" type="tns:uLogin00"/>
+      <xs:element minOccurs="0" name="userId" type="xs:string"/>
+      <xs:element minOccurs="0" name="waktu" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="inisialisasi00">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="access" type="xs:int"/>
+      <xs:element minOccurs="0" name="access2" type="xs:int"/>
+      <xs:element minOccurs="0" name="anggaran" type="tns:anggaran00"/>
+      <xs:element minOccurs="0" name="combiMasterClient" type="tns:combiMasterClient00"/>
+      <xs:element minOccurs="0" name="counterVendor" type="xs:int"/>
+      <xs:element minOccurs="0" name="jadwal" type="tns:jadwal00"/>
+      <xs:element minOccurs="0" name="jenisAuction" type="tns:jenisAuction00"/>
+      <xs:element minOccurs="0" name="jenisPengadaan" type="tns:jenisPengadaan00"/>
+      <xs:element minOccurs="0" name="menu" type="tns:menu00"/>
+      <xs:element minOccurs="0" name="metodePenawaranHarga" type="tns:metodePenawaranHarga00"/>
+      <xs:element minOccurs="0" name="metodePerencanaan" type="tns:metodePengadaan00"/>
+      <xs:element minOccurs="0" name="negosiasi" type="tns:negosiasi00"/>
+      <xs:element minOccurs="0" name="paramJmlVendor" type="xs:int"/>
+      <xs:element minOccurs="0" name="pengadaanRekanan" type="tns:pengadaanRekanan00"/>
+      <xs:element minOccurs="0" name="rate" type="xs:int"/>
+      <xs:element minOccurs="0" name="subBidangUsahaPengadaan" type="tns:subBidangUsahaPengadaan00"/>
+      <xs:element minOccurs="0" name="pBuatOleh" type="xs:int"/>
+      <xs:element minOccurs="0" name="pCompanyCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="pDihapus" type="xs:int"/>
+      <xs:element minOccurs="0" name="pEvlPFk" type="xs:int"/>
+      <xs:element minOccurs="0" name="pFlagAuction" type="xs:int"/>
+      <xs:element minOccurs="0" name="pFlagHasilP" type="xs:int"/>
+      <xs:element minOccurs="0" name="pFlagNego" type="xs:int"/>
+      <xs:element minOccurs="0" name="pFlagSanggah" type="xs:int"/>
+      <xs:element minOccurs="0" name="pFlagShareHasilP" type="xs:int"/>
+      <xs:element minOccurs="0" name="pHps" type="xs:string"/>
+      <xs:element minOccurs="0" name="pJnsAuctFk" type="xs:int"/>
+      <xs:element minOccurs="0" name="pJnsPFk" type="xs:int"/>
+      <xs:element minOccurs="0" name="pKMdlVFk" type="xs:int"/>
+      <xs:element minOccurs="0" name="pKdFk" type="xs:string"/>
+      <xs:element minOccurs="0" name="pKet" type="xs:string"/>
+      <xs:element minOccurs="0" name="pKetInternal" type="xs:string"/>
+      <xs:element minOccurs="0" name="pKualPFk" type="xs:int"/>
+      <xs:element minOccurs="0" name="pKursFk" type="xs:int"/>
+      <xs:element minOccurs="0" name="pMtdPFk" type="xs:int"/>
+      <xs:element minOccurs="0" name="pMtdPenyFk" type="xs:int"/>
+      <xs:element minOccurs="0" name="pMtdPnwFk" type="xs:int"/>
+      <xs:element minOccurs="0" name="pNm" type="xs:string"/>
+      <xs:element minOccurs="0" name="pNoDok" type="xs:string"/>
+      <xs:element minOccurs="0" name="pNoP" type="xs:string"/>
+      <xs:element minOccurs="0" name="pPFk" type="xs:int"/>
+      <xs:element minOccurs="0" name="pPaFk" type="xs:int"/>
+      <xs:element minOccurs="0" name="pPanFk" type="xs:int"/>
+      <xs:element minOccurs="0" name="pPk" type="xs:int"/>
+      <xs:element minOccurs="0" name="pPrlh" type="xs:string"/>
+      <xs:element minOccurs="0" name="pPrsplNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="pPrsplTgl" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="pRksFile" type="xs:string"/>
+      <xs:element minOccurs="0" name="pSpekTinggi" type="xs:int"/>
+      <xs:element minOccurs="0" name="pStatPgd" type="xs:int"/>
+      <xs:element minOccurs="0" name="pSyncStat" type="xs:string"/>
+      <xs:element minOccurs="0" name="pTgl" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="pTglBuat" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="pThpPgd" type="xs:int"/>
+      <xs:element minOccurs="0" name="pTipe" type="xs:int"/>
+      <xs:element minOccurs="0" name="pWfFk" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="anggaran00">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="paBuatOleh" type="xs:int"/>
+      <xs:element minOccurs="0" name="paCurrFk" type="xs:int"/>
+      <xs:element minOccurs="0" name="paDihapus" type="xs:int"/>
+      <xs:element minOccurs="0" name="paJml" type="xs:string"/>
+      <xs:element minOccurs="0" name="paJnsAgrnFk" type="xs:int"/>
+      <xs:element minOccurs="0" name="paKtrFk" type="xs:int"/>
+      <xs:element minOccurs="0" name="paNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="paPanFk" type="xs:int"/>
+      <xs:element minOccurs="0" name="paPeriode" type="xs:int"/>
+      <xs:element minOccurs="0" name="paPk" type="xs:int"/>
+      <xs:element minOccurs="0" name="paReal" type="xs:string"/>
+      <xs:element minOccurs="0" name="paSbrDanaFk" type="xs:int"/>
+      <xs:element minOccurs="0" name="paSisa" type="xs:string"/>
+      <xs:element minOccurs="0" name="paStatus" type="xs:int"/>
+      <xs:element minOccurs="0" name="paTgl" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="paTglBuat" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="paThn" type="xs:int"/>
+      <xs:element minOccurs="0" name="paTipePFk" type="xs:int"/>
+      <xs:element minOccurs="0" name="paUAsalFk" type="xs:int"/>
+      <xs:element minOccurs="0" name="paUTujuanFk" type="xs:int"/>
+      <xs:element minOccurs="0" name="paWilFk" type="xs:int"/>
+      <xs:element minOccurs="0" name="totalHps" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="combiMasterClient00">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="mcBuatOleh" type="xs:int"/>
+      <xs:element minOccurs="0" name="mcCity" type="xs:string"/>
+      <xs:element minOccurs="0" name="mcClientCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="mcCompanyCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="mcCompanyName" type="xs:string"/>
+      <xs:element minOccurs="0" name="mcCountryKey" type="xs:string"/>
+      <xs:element minOccurs="0" name="mcCurrencyKey" type="xs:string"/>
+      <xs:element minOccurs="0" name="mcDihapus" type="xs:int"/>
+      <xs:element minOccurs="0" name="mcName" type="xs:string"/>
+      <xs:element minOccurs="0" name="mcPk" type="xs:int"/>
+      <xs:element minOccurs="0" name="mcTglBuat" type="xs:dateTime"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="jadwal00">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="inisialisasi" type="tns:inisialisasi00"/>
+      <xs:element minOccurs="0" name="jdwPBuatOleh" type="xs:string"/>
+      <xs:element minOccurs="0" name="jdwPDihapus" type="xs:int"/>
+      <xs:element minOccurs="0" name="jdwPLok" type="xs:string"/>
+      <xs:element minOccurs="0" name="jdwPMdlFk" type="xs:int"/>
+      <xs:element minOccurs="0" name="jdwPPFk" type="xs:int"/>
+      <xs:element minOccurs="0" name="jdwPPk" type="xs:int"/>
+      <xs:element minOccurs="0" name="jdwPTglAkh" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="jdwPTglAwl" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="jdwPTglBuat" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="menu" type="tns:menu00"/>
+      <xs:element minOccurs="0" name="workflowModel" type="tns:workflowModel00"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="menu00">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="menuBuatOleh" type="xs:int"/>
+      <xs:element minOccurs="0" name="menuDihapus" type="xs:int"/>
+      <xs:element minOccurs="0" name="menuKet" type="xs:string"/>
+      <xs:element minOccurs="0" name="menuMdlFk" type="xs:int"/>
+      <xs:element minOccurs="0" name="menuNm" type="xs:string"/>
+      <xs:element minOccurs="0" name="menuPath" type="xs:string"/>
+      <xs:element minOccurs="0" name="menuPk" type="xs:int"/>
+      <xs:element minOccurs="0" name="menuTglBuat" type="xs:dateTime"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="workflowModel00">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="menu00" type="tns:menu00"/>
+      <xs:element minOccurs="0" name="wfMdlBuatOleh" type="xs:int"/>
+      <xs:element minOccurs="0" name="wfMdlDihapus" type="xs:int"/>
+      <xs:element minOccurs="0" name="wfMdlFlagJadwal" type="xs:int"/>
+      <xs:element minOccurs="0" name="wfMdlFlagLokasi" type="xs:int"/>
+      <xs:element minOccurs="0" name="wfMdlFlagTgl" type="xs:int"/>
+      <xs:element minOccurs="0" name="wfMdlLevel" type="xs:int"/>
+      <xs:element minOccurs="0" name="wfMdlMenu" type="xs:int"/>
+      <xs:element minOccurs="0" name="wfMdlPerluAprov" type="xs:int"/>
+      <xs:element minOccurs="0" name="wfMdlPk" type="xs:int"/>
+      <xs:element minOccurs="0" name="wfMdlStep" type="xs:string"/>
+      <xs:element minOccurs="0" name="wfMdlTglBuat" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="wfMdlWfFk" type="xs:int"/>
+      <xs:element minOccurs="0" name="workflow00" type="tns:workflow00"/>
+      <xs:element minOccurs="0" name="uLogin00" type="tns:uLogin00"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="workflow00">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="counterWorkflow" type="xs:long"/>
+      <xs:element minOccurs="0" name="wfBuatOleh" type="xs:int"/>
+      <xs:element minOccurs="0" name="wfDihapus" type="xs:int"/>
+      <xs:element minOccurs="0" name="wfKet" type="xs:string"/>
+      <xs:element minOccurs="0" name="wfModelFk" type="xs:int"/>
+      <xs:element minOccurs="0" name="wfNm" type="xs:string"/>
+      <xs:element minOccurs="0" name="wfPk" type="xs:int"/>
+      <xs:element minOccurs="0" name="wfTglBuat" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="wfTipeFk" type="xs:int"/>
+      <xs:element minOccurs="0" name="mWModel00" type="tns:mwModel00"/>
+      <xs:element minOccurs="0" name="mWTipe00" type="tns:mwTipe00"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="mwModel00">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="wrkMdlBuatOleh" type="xs:int"/>
+      <xs:element minOccurs="0" name="wrkMdlDihapus" type="xs:int"/>
+      <xs:element minOccurs="0" name="wrkMdlKet" type="xs:string"/>
+      <xs:element minOccurs="0" name="wrkMdlNm" type="xs:string"/>
+      <xs:element minOccurs="0" name="wrkMdlPk" type="xs:int"/>
+      <xs:element minOccurs="0" name="wrkMdlTglBuat" type="xs:dateTime"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="mwTipe00">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="wrkTypBuatOleh" type="xs:int"/>
+      <xs:element minOccurs="0" name="wrkTypDihapus" type="xs:int"/>
+      <xs:element minOccurs="0" name="wrkTypKet" type="xs:string"/>
+      <xs:element minOccurs="0" name="wrkTypNm" type="xs:string"/>
+      <xs:element minOccurs="0" name="wrkTypPk" type="xs:int"/>
+      <xs:element minOccurs="0" name="wrkTypTglBuat" type="xs:dateTime"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="uLogin00">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="loginBuatOleh" type="xs:int"/>
+      <xs:element minOccurs="0" name="loginCmpnyCd" type="xs:string"/>
+      <xs:element minOccurs="0" name="loginEmail" type="xs:string"/>
+      <xs:element minOccurs="0" name="loginId" type="xs:string"/>
+      <xs:element minOccurs="0" name="loginIsDelete" type="xs:int"/>
+      <xs:element minOccurs="0" name="loginIsDisabled" type="xs:int"/>
+      <xs:element minOccurs="0" name="loginIsInactive" type="xs:int"/>
+      <xs:element minOccurs="0" name="loginKtrFk" type="xs:int"/>
+      <xs:element minOccurs="0" name="loginNm" type="xs:string"/>
+      <xs:element minOccurs="0" name="loginPanFk" type="xs:int"/>
+      <xs:element minOccurs="0" name="loginPk" type="xs:int"/>
+      <xs:element minOccurs="0" name="loginPwd" type="xs:string"/>
+      <xs:element minOccurs="0" name="loginRoleFk" type="xs:int"/>
+      <xs:element minOccurs="0" name="loginStatus" type="xs:int"/>
+      <xs:element minOccurs="0" name="loginTerkunci" type="xs:int"/>
+      <xs:element minOccurs="0" name="loginTglBuat" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="loginVFk" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="jenisAuction00">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="jnsAuctBuatOleh" type="xs:int"/>
+      <xs:element minOccurs="0" name="jnsAuctDihapus" type="xs:int"/>
+      <xs:element minOccurs="0" name="jnsAuctKet" type="xs:string"/>
+      <xs:element minOccurs="0" name="jnsAuctNm" type="xs:string"/>
+      <xs:element minOccurs="0" name="jnsAuctPk" type="xs:int"/>
+      <xs:element minOccurs="0" name="jnsAuctTglBuat" type="xs:dateTime"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="jenisPengadaan00">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="jnsPBuatOleh" type="xs:int"/>
+      <xs:element minOccurs="0" name="jnsPDihapus" type="xs:int"/>
+      <xs:element minOccurs="0" name="jnsPKet" type="xs:string"/>
+      <xs:element minOccurs="0" name="jnsPNm" type="xs:string"/>
+      <xs:element minOccurs="0" name="jnsPPk" type="xs:int"/>
+      <xs:element minOccurs="0" name="jnsPTglBuat" type="xs:dateTime"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="metodePenawaranHarga00">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="mtdPnwBuatOleh" type="xs:int"/>
+      <xs:element minOccurs="0" name="mtdPnwDihapus" type="xs:int"/>
+      <xs:element minOccurs="0" name="mtdPnwKet" type="xs:string"/>
+      <xs:element minOccurs="0" name="mtdPnwNm" type="xs:string"/>
+      <xs:element minOccurs="0" name="mtdPnwPk" type="xs:int"/>
+      <xs:element minOccurs="0" name="mtdPnwTglBuat" type="xs:dateTime"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="metodePengadaan00">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="mtdPBuatOleh" type="xs:int"/>
+      <xs:element minOccurs="0" name="mtdPDihapus" type="xs:int"/>
+      <xs:element minOccurs="0" name="mtdPKet" type="xs:string"/>
+      <xs:element minOccurs="0" name="mtdPNm" type="xs:string"/>
+      <xs:element minOccurs="0" name="mtdPPk" type="xs:int"/>
+      <xs:element minOccurs="0" name="mtdPTglBuat" type="xs:dateTime"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="negosiasi00">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="evlPNegoBuatOleh" type="xs:int"/>
+      <xs:element minOccurs="0" name="evlPNegoCurrPan" type="xs:string"/>
+      <xs:element minOccurs="0" name="evlPNegoCurrV" type="xs:string"/>
+      <xs:element minOccurs="0" name="evlPNegoDihapus" type="xs:int"/>
+      <xs:element minOccurs="0" name="evlPNegoFlagPan" type="xs:int"/>
+      <xs:element minOccurs="0" name="evlPNegoFlagV" type="xs:int"/>
+      <xs:element minOccurs="0" name="evlPNegoHrgPan" type="xs:string"/>
+      <xs:element minOccurs="0" name="evlPNegoHrgPanOld" type="xs:string"/>
+      <xs:element minOccurs="0" name="evlPNegoHrgV" type="xs:string"/>
+      <xs:element minOccurs="0" name="evlPNegoPFk" type="xs:int"/>
+      <xs:element minOccurs="0" name="evlPNegoPk" type="xs:int"/>
+      <xs:element minOccurs="0" name="evlPNegoSeq" type="xs:int"/>
+      <xs:element minOccurs="0" name="evlPNegoTglBuat" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="evlPNegoVFk" type="xs:int"/>
+      <xs:element minOccurs="0" name="negosiasiDetail" type="tns:negosiasiDetail00"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="negosiasiDetail00">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="evlPNegoMtrBuatOleh" type="xs:int"/>
+      <xs:element minOccurs="0" name="evlPNegoMtrCurrPan" type="xs:string"/>
+      <xs:element minOccurs="0" name="evlPNegoMtrCurrV" type="xs:string"/>
+      <xs:element minOccurs="0" name="evlPNegoMtrDihapus" type="xs:int"/>
+      <xs:element minOccurs="0" name="evlPNegoMtrFlagPan" type="xs:int"/>
+      <xs:element minOccurs="0" name="evlPNegoMtrFlagV" type="xs:int"/>
+      <xs:element minOccurs="0" name="evlPNegoMtrHrgPan" type="xs:string"/>
+      <xs:element minOccurs="0" name="evlPNegoMtrHrgSatV" type="xs:string"/>
+      <xs:element minOccurs="0" name="evlPNegoMtrHrgV" type="xs:string"/>
+      <xs:element minOccurs="0" name="evlPNegoMtrJmlPan" type="xs:string"/>
+      <xs:element minOccurs="0" name="evlPNegoMtrJmlV" type="xs:string"/>
+      <xs:element minOccurs="0" name="evlPNegoMtrMtrJsPFk" type="xs:int"/>
+      <xs:element minOccurs="0" name="evlPNegoMtrNegoFk" type="xs:int"/>
+      <xs:element minOccurs="0" name="evlPNegoMtrPk" type="xs:int"/>
+      <xs:element minOccurs="0" name="evlPNegoMtrTglBuat" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="negosiasi" type="tns:negosiasi00"/>
+      <xs:element minOccurs="0" name="sumDetailCondition" type="xs:string"/>
+      <xs:element minOccurs="0" name="sumDetailConditionAmount" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="pengadaanRekanan00">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="rekanan" type="tns:rekanan00"/>
+      <xs:element minOccurs="0" name="pRekBuatOleh" type="xs:int"/>
+      <xs:element minOccurs="0" name="pRekDihapus" type="xs:int"/>
+      <xs:element minOccurs="0" name="pRekFlag" type="xs:int"/>
+      <xs:element minOccurs="0" name="pRekFlagDok1" type="xs:int"/>
+      <xs:element minOccurs="0" name="pRekFlagDok2" type="xs:int"/>
+      <xs:element minOccurs="0" name="pRekPFk" type="xs:int"/>
+      <xs:element minOccurs="0" name="pRekPk" type="xs:int"/>
+      <xs:element minOccurs="0" name="pRekTglAmb" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="pRekTglBuat" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="pRekTglMsk1" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="pRekTglMsk2" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="pRekThp" type="xs:int"/>
+      <xs:element minOccurs="0" name="pRekVFk" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="rekanan00">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="asosiasiVendor" type="tns:asosiasiVendor00"/>
+      <xs:element minOccurs="0" name="bidangUsaha" type="tns:bidangUsaha00"/>
+      <xs:element minOccurs="0" name="jumlah" type="xs:int"/>
+      <xs:element minOccurs="0" name="kantor" type="tns:kantor00"/>
+      <xs:element minOccurs="0" name="kualifikasiVendor" type="tns:kualifikasiVendor00"/>
+      <xs:element minOccurs="0" name="negosiasi" type="tns:negosiasi00"/>
+      <xs:element minOccurs="0" name="negosiasiDetail" type="tns:negosiasiDetail00"/>
+      <xs:element name="objectHelperMap">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="entry">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element minOccurs="0" name="key" type="xs:string"/>
+                  <xs:element minOccurs="0" name="value" type="xs:anyType"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" name="penawaranPertama" type="tns:penawaranPertama00"/>
+      <xs:element minOccurs="0" name="penawaranPertamaDetail" type="tns:penawaranPertamaDetail00"/>
+      <xs:element minOccurs="0" name="penawaranRekanan" type="tns:penawaranRekanan00"/>
+      <xs:element minOccurs="0" name="penawaranRekananDetail" type="tns:penawaranRekananDetail00"/>
+      <xs:element minOccurs="0" name="penetapanPemenang" type="tns:penetapanPemenang00"/>
+      <xs:element minOccurs="0" name="penetapanPemenangOffline" type="tns:penetapanPemenangOffline00"/>
+      <xs:element minOccurs="0" name="pengadaanRekanan" type="tns:pengadaanRekanan00"/>
+      <xs:element minOccurs="0" name="pengadaanRekananOffline" type="tns:pengadaanRekananOffline00"/>
+      <xs:element minOccurs="0" name="perusahaan" type="tns:perusahaan00"/>
+      <xs:element minOccurs="0" name="provinsi" type="tns:provinsi00"/>
+      <xs:element minOccurs="0" name="rekananAlatKerja" type="tns:rekananAlatKerja00"/>
+      <xs:element minOccurs="0" name="rekananBank" type="tns:rekananBank00"/>
+      <xs:element minOccurs="0" name="rekananDokumen" type="tns:rekananDokumen00"/>
+      <xs:element minOccurs="0" name="rekananKatalog" type="tns:rekananKatalog00"/>
+      <xs:element minOccurs="0" name="rekananPengalaman" type="tns:rekananPengalaman00"/>
+      <xs:element minOccurs="0" name="rekananSubbidangUsaha" type="tns:rekananSubbidangUsaha00"/>
+      <xs:element minOccurs="0" name="rekananTenagaAhli" type="tns:rekananTenagaAhli00"/>
+      <xs:element minOccurs="0" name="rekananUser" type="tns:rekananUser00"/>
+      <xs:element minOccurs="0" name="status" type="tns:status00"/>
+      <xs:element minOccurs="0" name="statusCurrent" type="tns:status00"/>
+      <xs:element minOccurs="0" name="statusNext" type="tns:status00"/>
+      <xs:element minOccurs="0" name="subbidangUsaha" type="tns:subbidangUsaha00"/>
+      <xs:element minOccurs="0" name="tipeVendorChecklist" type="xs:string"/>
+      <xs:element minOccurs="0" name="undanganRekanan" type="tns:undanganRekanan00"/>
+      <xs:element minOccurs="0" name="vendorChecklistDetail" type="tns:vendorChecklistDetail00"/>
+      <xs:element minOccurs="0" name="vendorTarget" type="tns:vendorTarget00"/>
+      <xs:element minOccurs="0" name="workflow" type="tns:workflow00"/>
+      <xs:element minOccurs="0" name="workflowApproveProcess" type="tns:workflowApproveProcess00"/>
+      <xs:element minOccurs="0" name="subbidangList" type="xs:string"/>
+      <xs:element minOccurs="0" name="vAlmt" type="xs:string"/>
+      <xs:element minOccurs="0" name="vAlmt1" type="xs:string"/>
+      <xs:element minOccurs="0" name="vAlmt2" type="xs:string"/>
+      <xs:element minOccurs="0" name="vAlmt3" type="xs:string"/>
+      <xs:element minOccurs="0" name="vAlmt4" type="xs:string"/>
+      <xs:element minOccurs="0" name="vAlmt5" type="xs:string"/>
+      <xs:element minOccurs="0" name="vApvAdmin" type="xs:int"/>
+      <xs:element minOccurs="0" name="vApvReason" type="xs:string"/>
+      <xs:element minOccurs="0" name="vAsoFk" type="xs:int"/>
+      <xs:element minOccurs="0" name="vBuatOleh" type="xs:int"/>
+      <xs:element minOccurs="0" name="vCalon" type="xs:int"/>
+      <xs:element minOccurs="0" name="vCity" type="xs:string"/>
+      <xs:element minOccurs="0" name="vCountry" type="xs:string"/>
+      <xs:element minOccurs="0" name="vCurrStat" type="xs:int"/>
+      <xs:element minOccurs="0" name="vDftrUnit" type="xs:string"/>
+      <xs:element minOccurs="0" name="vDihapus" type="xs:int"/>
+      <xs:element minOccurs="0" name="vDisclaimerFk" type="xs:int"/>
+      <xs:element minOccurs="0" name="vDrktr" type="xs:string"/>
+      <xs:element minOccurs="0" name="vDrktrEmail" type="xs:string"/>
+      <xs:element minOccurs="0" name="vDrktrHp" type="xs:string"/>
+      <xs:element minOccurs="0" name="vEmail" type="xs:string"/>
+      <xs:element minOccurs="0" name="vFax" type="xs:string"/>
+      <xs:element minOccurs="0" name="vFaxExt" type="xs:int"/>
+      <xs:element minOccurs="0" name="vFinanceEmail" type="xs:string"/>
+      <xs:element minOccurs="0" name="vFinanceHp" type="xs:string"/>
+      <xs:element minOccurs="0" name="vFinanceNm" type="xs:string"/>
+      <xs:element minOccurs="0" name="vGol" type="xs:int"/>
+      <xs:element minOccurs="0" name="vHomepage" type="xs:string"/>
+      <xs:element minOccurs="0" name="vHp" type="xs:string"/>
+      <xs:element minOccurs="0" name="vJenis" type="xs:int"/>
+      <xs:element minOccurs="0" name="vKdPos" type="xs:string"/>
+      <xs:element minOccurs="0" name="vKetExp" type="xs:string"/>
+      <xs:element minOccurs="0" name="vKetPartnerList" type="xs:string"/>
+      <xs:element minOccurs="0" name="vKtp" type="xs:string"/>
+      <xs:element minOccurs="0" name="vKtpTglAkhir" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="vKtrFk" type="xs:int"/>
+      <xs:element minOccurs="0" name="vKualFk" type="xs:int"/>
+      <xs:element minOccurs="0" name="vMerkDagang" type="xs:string"/>
+      <xs:element minOccurs="0" name="vNextStat" type="xs:int"/>
+      <xs:element minOccurs="0" name="vNm" type="xs:string"/>
+      <xs:element minOccurs="0" name="vNotificationEmail" type="xs:string"/>
+      <xs:element minOccurs="0" name="vNpwp" type="xs:string"/>
+      <xs:element minOccurs="0" name="vPk" type="xs:int"/>
+      <xs:element minOccurs="0" name="vPkp" type="xs:int"/>
+      <xs:element minOccurs="0" name="vPkpNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="vPngJwb" type="xs:string"/>
+      <xs:element minOccurs="0" name="vPngJwbEmail" type="xs:string"/>
+      <xs:element minOccurs="0" name="vPngJwbHp" type="xs:string"/>
+      <xs:element minOccurs="0" name="vPobox" type="xs:string"/>
+      <xs:element minOccurs="0" name="vPosition" type="xs:string"/>
+      <xs:element minOccurs="0" name="vProv" type="xs:string"/>
+      <xs:element minOccurs="0" name="vRefId" type="xs:string"/>
+      <xs:element minOccurs="0" name="vRespons" type="xs:string"/>
+      <xs:element minOccurs="0" name="vSaGroup" type="xs:string"/>
+      <xs:element minOccurs="0" name="vSalesEmail" type="xs:string"/>
+      <xs:element minOccurs="0" name="vSalesHp" type="xs:string"/>
+      <xs:element minOccurs="0" name="vSalesNm" type="xs:string"/>
+      <xs:element minOccurs="0" name="vSchemaGrp" type="xs:string"/>
+      <xs:element minOccurs="0" name="vSgkt" type="xs:string"/>
+      <xs:element minOccurs="0" name="vStatAktf" type="xs:int"/>
+      <xs:element minOccurs="0" name="vState" type="xs:string"/>
+      <xs:element minOccurs="0" name="vSyncD" type="xs:string"/>
+      <xs:element minOccurs="0" name="vSyncI" type="xs:string"/>
+      <xs:element minOccurs="0" name="vSyncU" type="xs:string"/>
+      <xs:element minOccurs="0" name="vTelp" type="xs:string"/>
+      <xs:element minOccurs="0" name="vTglAkhAktf" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="vTglAwlAktf" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="vTglBuat" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="vTglDaft" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="vTglRegNpwp" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="vTipe" type="xs:int"/>
+      <xs:element minOccurs="0" name="vTlpExt" type="xs:int"/>
+      <xs:element minOccurs="0" name="vTpFk" type="xs:int"/>
+      <xs:element minOccurs="0" name="vTrading" type="xs:string"/>
+      <xs:element minOccurs="0" name="vYear" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="asosiasiVendor00">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="asoBuatOleh" type="xs:int"/>
+      <xs:element minOccurs="0" name="asoDihapus" type="xs:int"/>
+      <xs:element minOccurs="0" name="asoKet" type="xs:string"/>
+      <xs:element minOccurs="0" name="asoNm" type="xs:string"/>
+      <xs:element minOccurs="0" name="asoPk" type="xs:int"/>
+      <xs:element minOccurs="0" name="asoTglBuat" type="xs:dateTime"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="bidangUsaha00">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="bidUshBuatOleh" type="xs:int"/>
+      <xs:element minOccurs="0" name="bidUshDihapus" type="xs:int"/>
+      <xs:element minOccurs="0" name="bidUshKet" type="xs:string"/>
+      <xs:element minOccurs="0" name="bidUshNm" type="xs:string"/>
+      <xs:element minOccurs="0" name="bidUshPk" type="xs:int"/>
+      <xs:element minOccurs="0" name="bidUshTglBuat" type="xs:dateTime"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="kantor00">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ktrAlmt" type="xs:string"/>
+      <xs:element minOccurs="0" name="ktrBuatOleh" type="xs:int"/>
+      <xs:element minOccurs="0" name="ktrCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="ktrDihapus" type="xs:int"/>
+      <xs:element minOccurs="0" name="ktrEmail" type="xs:string"/>
+      <xs:element minOccurs="0" name="ktrFax" type="xs:string"/>
+      <xs:element minOccurs="0" name="ktrHomepage" type="xs:string"/>
+      <xs:element minOccurs="0" name="ktrKdPos" type="xs:string"/>
+      <xs:element minOccurs="0" name="ktrKet" type="xs:string"/>
+      <xs:element minOccurs="0" name="ktrKota" type="xs:string"/>
+      <xs:element minOccurs="0" name="ktrKtrFk" type="xs:string"/>
+      <xs:element minOccurs="0" name="ktrLevel" type="xs:int"/>
+      <xs:element minOccurs="0" name="ktrNm" type="xs:string"/>
+      <xs:element minOccurs="0" name="ktrNmPimp" type="xs:string"/>
+      <xs:element minOccurs="0" name="ktrNpwp" type="xs:string"/>
+      <xs:element minOccurs="0" name="ktrOrgFk" type="xs:int"/>
+      <xs:element minOccurs="0" name="ktrPk" type="xs:int"/>
+      <xs:element minOccurs="0" name="ktrPngJwb" type="xs:string"/>
+      <xs:element minOccurs="0" name="ktrTelp" type="xs:string"/>
+      <xs:element minOccurs="0" name="ktrTglBuat" type="xs:dateTime"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="kualifikasiVendor00">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="kualBuatOleh" type="xs:int"/>
+      <xs:element minOccurs="0" name="kualDihapus" type="xs:int"/>
+      <xs:element minOccurs="0" name="kualKet" type="xs:string"/>
+      <xs:element minOccurs="0" name="kualNm" type="xs:string"/>
+      <xs:element minOccurs="0" name="kualPk" type="xs:int"/>
+      <xs:element minOccurs="0" name="kualTglBuat" type="xs:dateTime"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="penawaranPertama00">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="pnPrtmBuatOleh" type="xs:int"/>
+      <xs:element minOccurs="0" name="pnPrtmDihapus" type="xs:int"/>
+      <xs:element minOccurs="0" name="pnPrtmHrgSat" type="xs:string"/>
+      <xs:element minOccurs="0" name="pnPrtmHrgSatOri" type="xs:string"/>
+      <xs:element minOccurs="0" name="pnPrtmHrgTot" type="xs:string"/>
+      <xs:element minOccurs="0" name="pnPrtmHrgTotOri" type="xs:string"/>
+      <xs:element minOccurs="0" name="pnPrtmKursHrgSat" type="xs:string"/>
+      <xs:element minOccurs="0" name="pnPrtmKursHrgTot" type="xs:string"/>
+      <xs:element minOccurs="0" name="pnPrtmNil" type="xs:string"/>
+      <xs:element minOccurs="0" name="pnPrtmPFk" type="xs:int"/>
+      <xs:element minOccurs="0" name="pnPrtmPk" type="xs:int"/>
+      <xs:element minOccurs="0" name="pnPrtmSesiPnFk" type="xs:int"/>
+      <xs:element minOccurs="0" name="pnPrtmTglBuat" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="pnPrtmTppWkt" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="pnPrtmVFk" type="xs:int"/>
+      <xs:element minOccurs="0" name="pnPrtmValid" type="xs:int"/>
+      <xs:element minOccurs="0" name="ppdetail" type="tns:penawaranPertamaDetail00"/>
+      <xs:element minOccurs="0" name="rekanan" type="tns:rekanan00"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="penawaranPertamaDetail00">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="penawaranPertama" type="tns:penawaranPertama00"/>
+      <xs:element minOccurs="0" name="pnPrtmDetBuatOleh" type="xs:int"/>
+      <xs:element minOccurs="0" name="pnPrtmDetDihapus" type="xs:int"/>
+      <xs:element minOccurs="0" name="pnPrtmDetGuarantee" type="xs:string"/>
+      <xs:element minOccurs="0" name="pnPrtmDetHrgSat" type="xs:string"/>
+      <xs:element minOccurs="0" name="pnPrtmDetHrgSatOri" type="xs:string"/>
+      <xs:element minOccurs="0" name="pnPrtmDetHrgTot" type="xs:string"/>
+      <xs:element minOccurs="0" name="pnPrtmDetHrgTotOri" type="xs:string"/>
+      <xs:element minOccurs="0" name="pnPrtmDetKursHrgSat" type="xs:string"/>
+      <xs:element minOccurs="0" name="pnPrtmDetKursHrgTot" type="xs:string"/>
+      <xs:element minOccurs="0" name="pnPrtmDetLeadTime" type="xs:string"/>
+      <xs:element minOccurs="0" name="pnPrtmDetMtrJsPFk" type="xs:int"/>
+      <xs:element minOccurs="0" name="pnPrtmDetNil" type="xs:string"/>
+      <xs:element minOccurs="0" name="pnPrtmDetPk" type="xs:int"/>
+      <xs:element minOccurs="0" name="pnPrtmDetPnPrtmFk" type="xs:int"/>
+      <xs:element minOccurs="0" name="pnPrtmDetTermOfPayment" type="xs:string"/>
+      <xs:element minOccurs="0" name="pnPrtmDetTglBuat" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="pnPrtmDetTppWkt" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="pnPrtmDetValid" type="xs:int"/>
+      <xs:element minOccurs="0" name="sumCondition" type="xs:string"/>
+      <xs:element minOccurs="0" name="sumConditionAmout" type="xs:string"/>
+      <xs:element minOccurs="0" name="sumConditionPersen" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="penawaranRekanan00">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="counterKurs" type="xs:int"/>
+      <xs:element minOccurs="0" name="prDetail" type="tns:penawaranRekananDetail00"/>
+      <xs:element minOccurs="0" name="srtPnBuatOleh" type="xs:int"/>
+      <xs:element minOccurs="0" name="srtPnBuatTgl" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="srtPnDihapus" type="xs:int"/>
+      <xs:element minOccurs="0" name="srtPnHariJmn" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="srtPnHariKrm" type="xs:int"/>
+      <xs:element minOccurs="0" name="srtPnHrgNg" type="xs:string"/>
+      <xs:element minOccurs="0" name="srtPnHrgNgOri" type="xs:string"/>
+      <xs:element minOccurs="0" name="srtPnHrgNgTbl" type="xs:string"/>
+      <xs:element minOccurs="0" name="srtPnHrgPn" type="xs:string"/>
+      <xs:element minOccurs="0" name="srtPnHrgPnOri" type="xs:string"/>
+      <xs:element minOccurs="0" name="srtPnHrgTbl" type="xs:string"/>
+      <xs:element minOccurs="0" name="srtPnKursJmn" type="xs:string"/>
+      <xs:element minOccurs="0" name="srtPnKursNg" type="xs:string"/>
+      <xs:element minOccurs="0" name="srtPnKursPn" type="xs:string"/>
+      <xs:element minOccurs="0" name="srtPnNilJmn" type="xs:string"/>
+      <xs:element minOccurs="0" name="srtPnNilJmnOri" type="xs:string"/>
+      <xs:element minOccurs="0" name="srtPnNmPjmn" type="xs:string"/>
+      <xs:element minOccurs="0" name="srtPnNoSrtPn" type="xs:string"/>
+      <xs:element minOccurs="0" name="srtPnPFk" type="xs:int"/>
+      <xs:element minOccurs="0" name="srtPnPk" type="xs:int"/>
+      <xs:element minOccurs="0" name="srtPnPpn" type="xs:string"/>
+      <xs:element minOccurs="0" name="srtPnTgBtsPn" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="srtPnTgPn" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="srtPnVFk" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="penawaranRekananDetail00">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="srtPnMtrBuatOleh" type="xs:int"/>
+      <xs:element minOccurs="0" name="srtPnMtrDihapus" type="xs:int"/>
+      <xs:element minOccurs="0" name="srtPnMtrGuarantee" type="xs:string"/>
+      <xs:element minOccurs="0" name="srtPnMtrHrgKursNg" type="xs:string"/>
+      <xs:element minOccurs="0" name="srtPnMtrHrgKursPn" type="xs:string"/>
+      <xs:element minOccurs="0" name="srtPnMtrHrgNg" type="xs:string"/>
+      <xs:element minOccurs="0" name="srtPnMtrHrgNgOri" type="xs:string"/>
+      <xs:element minOccurs="0" name="srtPnMtrHrgNgTbl" type="xs:string"/>
+      <xs:element minOccurs="0" name="srtPnMtrHrgPn" type="xs:string"/>
+      <xs:element minOccurs="0" name="srtPnMtrHrgPnOri" type="xs:string"/>
+      <xs:element minOccurs="0" name="srtPnMtrHrgPnTbl" type="xs:string"/>
+      <xs:element minOccurs="0" name="srtPnMtrJml" type="xs:string"/>
+      <xs:element minOccurs="0" name="srtPnMtrJmlNg" type="xs:string"/>
+      <xs:element minOccurs="0" name="srtPnMtrJsPFk" type="xs:int"/>
+      <xs:element minOccurs="0" name="srtPnMtrLeadTime" type="xs:string"/>
+      <xs:element minOccurs="0" name="srtPnMtrPk" type="xs:int"/>
+      <xs:element minOccurs="0" name="srtPnMtrSrtPnFk" type="xs:int"/>
+      <xs:element minOccurs="0" name="srtPnMtrTermOfPayment" type="xs:string"/>
+      <xs:element minOccurs="0" name="srtPnMtrTglBuat" type="xs:dateTime"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="penetapanPemenang00">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="penawaranRekanan" type="tns:penawaranRekanan00"/>
+      <xs:element minOccurs="0" name="pnPrtmHrgTot" type="xs:string"/>
+      <xs:element minOccurs="0" name="pnPrtmHrgTotOri" type="xs:string"/>
+      <xs:element minOccurs="0" name="rekanan" type="tns:rekanan00"/>
+      <xs:element minOccurs="0" name="txEvlPAdm" type="xs:int"/>
+      <xs:element minOccurs="0" name="txEvlPAlmtPengiriman" type="xs:string"/>
+      <xs:element minOccurs="0" name="txEvlPBobot" type="xs:int"/>
+      <xs:element minOccurs="0" name="txEvlPCln" type="xs:int"/>
+      <xs:element minOccurs="0" name="txEvlPHrg" type="xs:string"/>
+      <xs:element minOccurs="0" name="txEvlPHrgNego" type="xs:string"/>
+      <xs:element minOccurs="0" name="txEvlPHrgTotal" type="xs:string"/>
+      <xs:element minOccurs="0" name="txEvlPManufacture" type="xs:string"/>
+      <xs:element minOccurs="0" name="txEvlPMtrJsPFk" type="xs:int"/>
+      <xs:element minOccurs="0" name="txEvlPNilai" type="xs:string"/>
+      <xs:element minOccurs="0" name="txEvlPPFk" type="xs:int"/>
+      <xs:element minOccurs="0" name="txEvlPPk" type="xs:int"/>
+      <xs:element minOccurs="0" name="txEvlPPmn" type="xs:int"/>
+      <xs:element minOccurs="0" name="txEvlPQty" type="xs:string"/>
+      <xs:element minOccurs="0" name="txEvlPTek" type="xs:int"/>
+      <xs:element minOccurs="0" name="txEvlPVFk" type="xs:int"/>
+      <xs:element minOccurs="0" name="txEvlVBuatOleh" type="xs:int"/>
+      <xs:element minOccurs="0" name="txEvlVDihapus" type="xs:int"/>
+      <xs:element minOccurs="0" name="txEvlVTglBuat" type="xs:dateTime"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="penetapanPemenangOffline00">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="pnPoffrtmHrgTot" type="xs:string"/>
+      <xs:element minOccurs="0" name="pnPoffrtmHrgTotOri" type="xs:string"/>
+      <xs:element minOccurs="0" name="txEvlPoffAdm" type="xs:int"/>
+      <xs:element minOccurs="0" name="txEvlPoffBobot" type="xs:int"/>
+      <xs:element minOccurs="0" name="txEvlPoffCln" type="xs:int"/>
+      <xs:element minOccurs="0" name="txEvlPoffHrg" type="xs:int"/>
+      <xs:element minOccurs="0" name="txEvlPoffHrgNego" type="xs:string"/>
+      <xs:element minOccurs="0" name="txEvlPoffMaterialDesc" type="xs:string"/>
+      <xs:element minOccurs="0" name="txEvlPoffMtrJsPFk" type="xs:int"/>
+      <xs:element minOccurs="0" name="txEvlPoffNilai" type="xs:string"/>
+      <xs:element minOccurs="0" name="txEvlPoffPFk" type="xs:int"/>
+      <xs:element minOccurs="0" name="txEvlPoffPk" type="xs:int"/>
+      <xs:element minOccurs="0" name="txEvlPoffPmn" type="xs:int"/>
+      <xs:element minOccurs="0" name="txEvlPoffTek" type="xs:int"/>
+      <xs:element minOccurs="0" name="txEvlPoffVFk" type="xs:int"/>
+      <xs:element minOccurs="0" name="txEvlPoffVQty" type="xs:string"/>
+      <xs:element minOccurs="0" name="txEvlVPoffBuatOleh" type="xs:int"/>
+      <xs:element minOccurs="0" name="txEvlVPoffDihapus" type="xs:int"/>
+      <xs:element minOccurs="0" name="txEvlVPoffTglBuat" type="xs:dateTime"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="pengadaanRekananOffline00">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="poffRekBuatOleh" type="xs:int"/>
+      <xs:element minOccurs="0" name="poffRekDihapus" type="xs:int"/>
+      <xs:element minOccurs="0" name="poffRekFlag" type="xs:int"/>
+      <xs:element minOccurs="0" name="poffRekFlagDok1" type="xs:int"/>
+      <xs:element minOccurs="0" name="poffRekFlagDok2" type="xs:int"/>
+      <xs:element minOccurs="0" name="poffRekPFk" type="xs:int"/>
+      <xs:element minOccurs="0" name="poffRekPk" type="xs:int"/>
+      <xs:element minOccurs="0" name="poffRekTglAmb" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="poffRekTglBuat" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="poffRekTglMsk1" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="poffRekTglMsk2" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="poffRekThp" type="xs:int"/>
+      <xs:element minOccurs="0" name="poffRekVFk" type="xs:int"/>
+      <xs:element minOccurs="0" name="rekanan" type="tns:rekanan00"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="perusahaan00">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="tpAnredCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="tpBuatOleh" type="xs:int"/>
+      <xs:element minOccurs="0" name="tpDihapus" type="xs:int"/>
+      <xs:element minOccurs="0" name="tpKet" type="xs:string"/>
+      <xs:element minOccurs="0" name="tpNm" type="xs:string"/>
+      <xs:element minOccurs="0" name="tpPk" type="xs:int"/>
+      <xs:element minOccurs="0" name="tpTglBuat" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="tpTpFk" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="provinsi00">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="provDelete" type="xs:int"/>
+      <xs:element minOccurs="0" name="provDibuatOleh" type="xs:int"/>
+      <xs:element minOccurs="0" name="provDibuatTgl" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="provKd" type="xs:string"/>
+      <xs:element minOccurs="0" name="provKdNegara" type="xs:string"/>
+      <xs:element minOccurs="0" name="provKet" type="xs:string"/>
+      <xs:element minOccurs="0" name="provNm" type="xs:string"/>
+      <xs:element minOccurs="0" name="provPk" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="rekananAlatKerja00">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="vAlatBuatOleh" type="xs:int"/>
+      <xs:element minOccurs="0" name="vAlatDihapus" type="xs:int"/>
+      <xs:element minOccurs="0" name="vAlatJml" type="xs:int"/>
+      <xs:element minOccurs="0" name="vAlatKet" type="xs:string"/>
+      <xs:element minOccurs="0" name="vAlatNm" type="xs:string"/>
+      <xs:element minOccurs="0" name="vAlatPk" type="xs:int"/>
+      <xs:element minOccurs="0" name="vAlatTglBuat" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="vAlatVFk" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="rekananBank00">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="bank" type="tns:bank00"/>
+      <xs:element minOccurs="0" name="negara" type="tns:negara00"/>
+      <xs:element minOccurs="0" name="rekanan" type="tns:rekanan00"/>
+      <xs:element minOccurs="0" name="vBankAccNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="vBankAktfSts" type="xs:int"/>
+      <xs:element minOccurs="0" name="vBankAlmt" type="xs:string"/>
+      <xs:element minOccurs="0" name="vBankBankFk" type="xs:int"/>
+      <xs:element minOccurs="0" name="vBankBuatOleh" type="xs:int"/>
+      <xs:element minOccurs="0" name="vBankCab" type="xs:string"/>
+      <xs:element minOccurs="0" name="vBankCity" type="xs:string"/>
+      <xs:element minOccurs="0" name="vBankCountry" type="xs:int"/>
+      <xs:element minOccurs="0" name="vBankCurr" type="xs:int"/>
+      <xs:element minOccurs="0" name="vBankDihapus" type="xs:int"/>
+      <xs:element minOccurs="0" name="vBankFile" type="xs:string"/>
+      <xs:element minOccurs="0" name="vBankNm" type="xs:string"/>
+      <xs:element minOccurs="0" name="vBankNmAcc" type="xs:string"/>
+      <xs:element minOccurs="0" name="vBankPartner" type="xs:string"/>
+      <xs:element minOccurs="0" name="vBankPk" type="xs:int"/>
+      <xs:element minOccurs="0" name="vBankSeq" type="xs:string"/>
+      <xs:element minOccurs="0" name="vBankState" type="xs:int"/>
+      <xs:element minOccurs="0" name="vBankSwift" type="xs:string"/>
+      <xs:element minOccurs="0" name="vBankTglBuat" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="vBankVFk" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="bank00">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="bankAlmt" type="xs:string"/>
+      <xs:element minOccurs="0" name="bankBuatOleh" type="xs:int"/>
+      <xs:element minOccurs="0" name="bankCabNm" type="xs:string"/>
+      <xs:element minOccurs="0" name="bankCity" type="xs:string"/>
+      <xs:element minOccurs="0" name="bankCountry" type="xs:string"/>
+      <xs:element minOccurs="0" name="bankDihapus" type="xs:int"/>
+      <xs:element minOccurs="0" name="bankGroup" type="xs:string"/>
+      <xs:element minOccurs="0" name="bankKd" type="xs:string"/>
+      <xs:element minOccurs="0" name="bankKey" type="xs:string"/>
+      <xs:element minOccurs="0" name="bankNegaraFk" type="xs:int"/>
+      <xs:element minOccurs="0" name="bankNm" type="xs:string"/>
+      <xs:element minOccurs="0" name="bankNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="bankPk" type="xs:int"/>
+      <xs:element minOccurs="0" name="bankRekanan00" type="tns:rekananBank00"/>
+      <xs:element minOccurs="0" name="bankSwift" type="xs:string"/>
+      <xs:element minOccurs="0" name="bankTglBuat" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="bankTlp" type="xs:string"/>
+      <xs:element minOccurs="0" name="negara" type="tns:negara00"/>
+      <xs:element minOccurs="0" name="rekananBank00" type="tns:rekananBank00"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="negara00">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="negaraDelete" type="xs:int"/>
+      <xs:element minOccurs="0" name="negaraKd" type="xs:string"/>
+      <xs:element minOccurs="0" name="negaraKet" type="xs:string"/>
+      <xs:element minOccurs="0" name="negaraNm" type="xs:string"/>
+      <xs:element minOccurs="0" name="negaraPembuat" type="xs:int"/>
+      <xs:element minOccurs="0" name="negaraPk" type="xs:int"/>
+      <xs:element minOccurs="0" name="negaraTglBuat" type="xs:dateTime"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="rekananDokumen00">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="dokumen" type="tns:dokumen00"/>
+      <xs:element minOccurs="0" name="rekanan" type="tns:rekanan00"/>
+      <xs:element minOccurs="0" name="vDokBuatOleh" type="xs:int"/>
+      <xs:element minOccurs="0" name="vDokDihapus" type="xs:int"/>
+      <xs:element minOccurs="0" name="vDokFile" type="xs:string"/>
+      <xs:element minOccurs="0" name="vDokFlag" type="xs:int"/>
+      <xs:element minOccurs="0" name="vDokFlagAdmin" type="xs:int"/>
+      <xs:element minOccurs="0" name="vDokKet" type="xs:string"/>
+      <xs:element minOccurs="0" name="vDokNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="vDokPk" type="xs:int"/>
+      <xs:element minOccurs="0" name="vDokTgl" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="vDokTglBuat" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="vDokTglDaft" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="vDokTglExp" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="vDokVDocmFk" type="xs:int"/>
+      <xs:element minOccurs="0" name="vDokVFk" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="dokumen00">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="checklist" type="tns:checklist00"/>
+      <xs:element minOccurs="0" name="dokumenCekFk" type="xs:int"/>
+      <xs:element minOccurs="0" name="dokumenHapus" type="xs:int"/>
+      <xs:element minOccurs="0" name="dokumenKet" type="xs:string"/>
+      <xs:element minOccurs="0" name="dokumenMdtry" type="xs:int"/>
+      <xs:element minOccurs="0" name="dokumenNm" type="xs:string"/>
+      <xs:element minOccurs="0" name="dokumenPembuat" type="xs:int"/>
+      <xs:element minOccurs="0" name="dokumenPk" type="xs:int"/>
+      <xs:element minOccurs="0" name="dokumenTampil" type="xs:int"/>
+      <xs:element minOccurs="0" name="dokumenTglBuat" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="dokumenTpFk" type="xs:int"/>
+      <xs:element minOccurs="0" name="rekananDokumen" type="tns:rekananDokumen00"/>
+      <xs:element minOccurs="0" name="vendorChecklist" type="tns:vendorChecklist00"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="checklist00">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cekBuatOleh" type="xs:int"/>
+      <xs:element minOccurs="0" name="cekDihapus" type="xs:int"/>
+      <xs:element minOccurs="0" name="cekKet" type="xs:string"/>
+      <xs:element minOccurs="0" name="cekNm" type="xs:string"/>
+      <xs:element minOccurs="0" name="cekPk" type="xs:int"/>
+      <xs:element minOccurs="0" name="cekTglBuat" type="xs:dateTime"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="vendorChecklist00">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="vCekBuatOleh" type="xs:int"/>
+      <xs:element minOccurs="0" name="vCekCekDetFk" type="xs:int"/>
+      <xs:element minOccurs="0" name="vCekDihapus" type="xs:int"/>
+      <xs:element minOccurs="0" name="vCekFlag" type="xs:int"/>
+      <xs:element minOccurs="0" name="vCekFlagAdmin" type="xs:int"/>
+      <xs:element minOccurs="0" name="vCekPk" type="xs:int"/>
+      <xs:element minOccurs="0" name="vCekTglBuat" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="vCekVFk" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="rekananKatalog00">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="vKtlgBros" type="xs:string"/>
+      <xs:element minOccurs="0" name="vKtlgBuatOleh" type="xs:int"/>
+      <xs:element minOccurs="0" name="vKtlgDihapus" type="xs:int"/>
+      <xs:element minOccurs="0" name="vKtlgGrp" type="xs:string"/>
+      <xs:element minOccurs="0" name="vKtlgHrg" type="xs:string"/>
+      <xs:element minOccurs="0" name="vKtlgKet" type="xs:string"/>
+      <xs:element minOccurs="0" name="vKtlgNm" type="xs:string"/>
+      <xs:element minOccurs="0" name="vKtlgPk" type="xs:int"/>
+      <xs:element minOccurs="0" name="vKtlgRefId" type="xs:string"/>
+      <xs:element minOccurs="0" name="vKtlgSatuan" type="xs:string"/>
+      <xs:element minOccurs="0" name="vKtlgTglBuat" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="vKtlgTipe" type="xs:string"/>
+      <xs:element minOccurs="0" name="vKtlgVFk" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="rekananPengalaman00">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="vExpAlmtPmlk" type="xs:string"/>
+      <xs:element minOccurs="0" name="vExpDibuatOleh" type="xs:int"/>
+      <xs:element minOccurs="0" name="vExpDihapus" type="xs:int"/>
+      <xs:element minOccurs="0" name="vExpFile" type="xs:string"/>
+      <xs:element minOccurs="0" name="vExpKetPkj" type="xs:string"/>
+      <xs:element minOccurs="0" name="vExpLokasi" type="xs:string"/>
+      <xs:element minOccurs="0" name="vExpNilaiPkj" type="xs:string"/>
+      <xs:element minOccurs="0" name="vExpNmPkj" type="xs:string"/>
+      <xs:element minOccurs="0" name="vExpNoKontrak" type="xs:string"/>
+      <xs:element minOccurs="0" name="vExpPk" type="xs:int"/>
+      <xs:element minOccurs="0" name="vExpPmlkPkj" type="xs:string"/>
+      <xs:element minOccurs="0" name="vExpPrestKrjAkh" type="xs:string"/>
+      <xs:element minOccurs="0" name="vExpTelpPmlk" type="xs:string"/>
+      <xs:element minOccurs="0" name="vExpTglBuat" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="vExpTglKontrak" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="vExpTglProsAkh" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="vExpTglSlsBaSrhTrm" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="vExpTglSlsKontrak" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="vExpTndSls" type="xs:int"/>
+      <xs:element minOccurs="0" name="vExpVFk" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="rekananSubbidangUsaha00">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="vSbBidBuatOleh" type="xs:int"/>
+      <xs:element minOccurs="0" name="vSbBidDihapus" type="xs:int"/>
+      <xs:element minOccurs="0" name="vSbBidNm" type="xs:string"/>
+      <xs:element minOccurs="0" name="vSbBidPk" type="xs:int"/>
+      <xs:element minOccurs="0" name="vSbBidSbBidFk" type="xs:int"/>
+      <xs:element minOccurs="0" name="vSbBidTglBuat" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="vSbBidVFk" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="rekananTenagaAhli00">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="vAhliAlmt" type="xs:string"/>
+      <xs:element minOccurs="0" name="vAhliBuatOleh" type="xs:int"/>
+      <xs:element minOccurs="0" name="vAhliDihapus" type="xs:int"/>
+      <xs:element minOccurs="0" name="vAhliExp" type="xs:string"/>
+      <xs:element minOccurs="0" name="vAhliNm" type="xs:string"/>
+      <xs:element minOccurs="0" name="vAhliPk" type="xs:int"/>
+      <xs:element minOccurs="0" name="vAhliSkill" type="xs:string"/>
+      <xs:element minOccurs="0" name="vAhliTelp" type="xs:string"/>
+      <xs:element minOccurs="0" name="vAhliTglBuat" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="vAhliVFk" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="rekananUser00">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="vUserAlmt" type="xs:string"/>
+      <xs:element minOccurs="0" name="vUserBuatOleh" type="xs:int"/>
+      <xs:element minOccurs="0" name="vUserDihapus" type="xs:int"/>
+      <xs:element minOccurs="0" name="vUserNm" type="xs:string"/>
+      <xs:element minOccurs="0" name="vUserPk" type="xs:int"/>
+      <xs:element minOccurs="0" name="vUserPosisi" type="xs:string"/>
+      <xs:element minOccurs="0" name="vUserTelp" type="xs:string"/>
+      <xs:element minOccurs="0" name="vUserTglBuat" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="vUserVFk" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="status00">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="statusHapus" type="xs:int"/>
+      <xs:element minOccurs="0" name="statusKet" type="xs:string"/>
+      <xs:element minOccurs="0" name="statusNm" type="xs:string"/>
+      <xs:element minOccurs="0" name="statusPembuat" type="xs:int"/>
+      <xs:element minOccurs="0" name="statusPk" type="xs:int"/>
+      <xs:element minOccurs="0" name="statusTglBuat" type="xs:dateTime"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="subbidangUsaha00">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="bidangUsaha" type="tns:bidangUsaha00"/>
+      <xs:element minOccurs="0" name="rekananSubBidangUsaha" type="tns:rekananSubbidangUsaha00"/>
+      <xs:element minOccurs="0" name="sbBidUshBidUshFk" type="xs:string"/>
+      <xs:element minOccurs="0" name="sbBidUshBuatOleh" type="xs:int"/>
+      <xs:element minOccurs="0" name="sbBidUshDihapus" type="xs:int"/>
+      <xs:element minOccurs="0" name="sbBidUshKet" type="xs:string"/>
+      <xs:element minOccurs="0" name="sbBidUshNm" type="xs:string"/>
+      <xs:element minOccurs="0" name="sbBidUshPk" type="xs:int"/>
+      <xs:element minOccurs="0" name="sbBidUshTglBuat" type="xs:dateTime"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="undanganRekanan00">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="udVBuatOleh" type="xs:int"/>
+      <xs:element minOccurs="0" name="udVDihapus" type="xs:int"/>
+      <xs:element minOccurs="0" name="udVFlag" type="xs:int"/>
+      <xs:element minOccurs="0" name="udVNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="udVPFk" type="xs:int"/>
+      <xs:element minOccurs="0" name="udVPk" type="xs:int"/>
+      <xs:element minOccurs="0" name="udVTgl" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="udVTglBuat" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="udVVFk" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="vendorChecklistDetail00">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="vCdAccGrp" type="xs:string"/>
+      <xs:element minOccurs="0" name="vCdAudit1" type="xs:string"/>
+      <xs:element minOccurs="0" name="vCdAudit2" type="xs:string"/>
+      <xs:element minOccurs="0" name="vCdBuatOleh" type="xs:int"/>
+      <xs:element minOccurs="0" name="vCdDihapus" type="xs:int"/>
+      <xs:element minOccurs="0" name="vCdGlAccount" type="xs:string"/>
+      <xs:element minOccurs="0" name="vCdIndukPerusahaan" type="xs:string"/>
+      <xs:element minOccurs="0" name="vCdListCombiComp" type="xs:string"/>
+      <xs:element minOccurs="0" name="vCdListCombiCompIs" type="xs:string"/>
+      <xs:element minOccurs="0" name="vCdPaymentKey" type="xs:string"/>
+      <xs:element minOccurs="0" name="vCdPk" type="xs:int"/>
+      <xs:element minOccurs="0" name="vCdPraFk" type="xs:int"/>
+      <xs:element minOccurs="0" name="vCdSaGroup" type="xs:string"/>
+      <xs:element minOccurs="0" name="vCdSchemaGroup" type="xs:string"/>
+      <xs:element minOccurs="0" name="vCdSortKey" type="xs:string"/>
+      <xs:element name="vCdStatus" type="xs:int"/>
+      <xs:element minOccurs="0" name="vCdTax" type="xs:string"/>
+      <xs:element minOccurs="0" name="vCdTax1" type="xs:string"/>
+      <xs:element minOccurs="0" name="vCdTax2" type="xs:string"/>
+      <xs:element minOccurs="0" name="vCdTax3" type="xs:string"/>
+      <xs:element minOccurs="0" name="vCdTax4" type="xs:string"/>
+      <xs:element minOccurs="0" name="vCdTglBuat" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="vCdTrading" type="xs:string"/>
+      <xs:element minOccurs="0" name="vCdVFk" type="xs:int"/>
+      <xs:element minOccurs="0" name="vCdVLevel" type="xs:int"/>
+      <xs:element minOccurs="0" name="vCdVWFk" type="xs:int"/>
+      <xs:element minOccurs="0" name="vCdWh" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="vendorTarget00">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="vtBuatOleh" type="xs:int"/>
+      <xs:element minOccurs="0" name="vtDihapus" type="xs:int"/>
+      <xs:element minOccurs="0" name="vtPk" type="xs:int"/>
+      <xs:element minOccurs="0" name="vtScore" type="xs:string"/>
+      <xs:element minOccurs="0" name="vtTglBuat" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="vtVFk" type="xs:int"/>
+      <xs:element minOccurs="0" name="vtVNm" type="xs:string"/>
+      <xs:element minOccurs="0" name="vtVRefId" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="workflowApproveProcess00">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="inisialisasi" type="tns:inisialisasi00"/>
+      <xs:element minOccurs="0" name="wfAprovPrcsBuatOleh" type="xs:int"/>
+      <xs:element minOccurs="0" name="wfAprovPrcsDihapus" type="xs:int"/>
+      <xs:element minOccurs="0" name="wfAprovPrcsDisetujui" type="xs:int"/>
+      <xs:element minOccurs="0" name="wfAprovPrcsFlag" type="xs:int"/>
+      <xs:element minOccurs="0" name="wfAprovPrcsKet" type="xs:string"/>
+      <xs:element minOccurs="0" name="wfAprovPrcsLevel" type="xs:int"/>
+      <xs:element minOccurs="0" name="wfAprovPrcsLoginFk" type="xs:int"/>
+      <xs:element minOccurs="0" name="wfAprovPrcsPk" type="xs:int"/>
+      <xs:element minOccurs="0" name="wfAprovPrcsProcFk" type="xs:int"/>
+      <xs:element minOccurs="0" name="wfAprovPrcsTglAprov" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="wfAprovPrcsTglBuat" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="wfAprovPrcsWfMdlFk" type="xs:int"/>
+      <xs:element minOccurs="0" name="uLogin00" type="tns:uLogin00"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="subBidangUsahaPengadaan00">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="bidangUsaha" type="tns:bidangUsaha00"/>
+      <xs:element minOccurs="0" name="sbPBuatOleh" type="xs:int"/>
+      <xs:element minOccurs="0" name="sbPDihapus" type="xs:int"/>
+      <xs:element minOccurs="0" name="sbPPFk" type="xs:int"/>
+      <xs:element minOccurs="0" name="sbPPk" type="xs:int"/>
+      <xs:element minOccurs="0" name="sbPSbBidUshFk" type="xs:int"/>
+      <xs:element minOccurs="0" name="sbPTglBuat" type="xs:dateTime"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="role00">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="roleBuatOleh" type="xs:int"/>
+      <xs:element minOccurs="0" name="roleDihapus" type="xs:int"/>
+      <xs:element minOccurs="0" name="roleNm" type="xs:string"/>
+      <xs:element minOccurs="0" name="rolePk" type="xs:int"/>
+      <xs:element minOccurs="0" name="roleTglBuat" type="xs:dateTime"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getTableLogByUserId">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="vPk" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getTableLogByUserIdResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:tableLog00"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getTableLogByIdUser">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="vPk" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getTableLogByIdUserResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:tableLog00"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getTableLogListByPengadaanPk">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="pPk" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getTableLogListByPengadaanPkResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:tableLog00"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getTableLogList">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="TableLog00" type="tns:tableLog00"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getTableLogListResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:tableLog00"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getTableLogListforPengadaan">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="getTableLogListforPengadaanResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:tableLog00"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getTableLogByRoleVendor">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="getTableLogByRoleVendorResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:tableLog00"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getTableLogByRolePanitia">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="getTableLogByRolePanitiaResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:tableLog00"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getAuditTrailListWithKeyword">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="iDisplayStart" type="xs:int"/>
+      <xs:element minOccurs="0" name="iDisplayLength" type="xs:int"/>
+      <xs:element minOccurs="0" name="keyword" type="xs:string"/>
+      <xs:element minOccurs="0" name="column" type="xs:int"/>
+      <xs:element minOccurs="0" name="sort" type="xs:string"/>
+      <xs:element minOccurs="0" name="pagging" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="tglawal" type="xs:string"/>
+      <xs:element minOccurs="0" name="tglakhir" type="xs:string"/>
+      <xs:element minOccurs="0" name="userId" type="xs:string"/>
+      <xs:element minOccurs="0" name="rolenm" type="xs:string"/>
+      <xs:element minOccurs="0" name="userPk" type="xs:string"/>
+      <xs:element minOccurs="0" name="pengadaannm" type="xs:string"/>
+      <xs:element minOccurs="0" name="pengadaanpk" type="xs:string"/>
+      <xs:element minOccurs="0" name="rolepk" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getAuditTrailListWithKeywordResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:tableLog00"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="getTableLogByIdUser">
+    <wsdl:part element="tns:getTableLogByIdUser" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getTableLogByRoleVendorResponse">
+    <wsdl:part element="tns:getTableLogByRoleVendorResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getTableLogByUserId">
+    <wsdl:part element="tns:getTableLogByUserId" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getTableLogListByPengadaanPk">
+    <wsdl:part element="tns:getTableLogListByPengadaanPk" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getTableLogListByPengadaanPkResponse">
+    <wsdl:part element="tns:getTableLogListByPengadaanPkResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getTableLogListResponse">
+    <wsdl:part element="tns:getTableLogListResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getTableLogByIdUserResponse">
+    <wsdl:part element="tns:getTableLogByIdUserResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getTableLogListforPengadaan">
+    <wsdl:part element="tns:getTableLogListforPengadaan" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getTableLogByRolePanitiaResponse">
+    <wsdl:part element="tns:getTableLogByRolePanitiaResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getTableLogByUserIdResponse">
+    <wsdl:part element="tns:getTableLogByUserIdResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getAuditTrailListWithKeywordResponse">
+    <wsdl:part element="tns:getAuditTrailListWithKeywordResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getTableLogByRolePanitia">
+    <wsdl:part element="tns:getTableLogByRolePanitia" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getAuditTrailListWithKeyword">
+    <wsdl:part element="tns:getAuditTrailListWithKeyword" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getTableLogList">
+    <wsdl:part element="tns:getTableLogList" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getTableLogListforPengadaanResponse">
+    <wsdl:part element="tns:getTableLogListforPengadaanResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getTableLog">
+    <wsdl:part element="tns:getTableLog" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getTableLogByRoleVendor">
+    <wsdl:part element="tns:getTableLogByRoleVendor" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getTableLogResponse">
+    <wsdl:part element="tns:getTableLogResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="TableLog00Services">
+    <wsdl:operation name="getTableLog">
+<wsdl:documentation>Get single data record by PK</wsdl:documentation>
+      <wsdl:input message="tns:getTableLog" name="getTableLog">
+    </wsdl:input>
+      <wsdl:output message="tns:getTableLogResponse" name="getTableLogResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTableLogByUserId">
+<wsdl:documentation>Get single data record by PK</wsdl:documentation>
+      <wsdl:input message="tns:getTableLogByUserId" name="getTableLogByUserId">
+    </wsdl:input>
+      <wsdl:output message="tns:getTableLogByUserIdResponse" name="getTableLogByUserIdResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTableLogByIdUser">
+<wsdl:documentation>Get single data record by PK</wsdl:documentation>
+      <wsdl:input message="tns:getTableLogByIdUser" name="getTableLogByIdUser">
+    </wsdl:input>
+      <wsdl:output message="tns:getTableLogByIdUserResponse" name="getTableLogByIdUserResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTableLogListByPengadaanPk">
+<wsdl:documentation>Get single data record by PK</wsdl:documentation>
+      <wsdl:input message="tns:getTableLogListByPengadaanPk" name="getTableLogListByPengadaanPk">
+    </wsdl:input>
+      <wsdl:output message="tns:getTableLogListByPengadaanPkResponse" name="getTableLogListByPengadaanPkResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTableLogList">
+      <wsdl:input message="tns:getTableLogList" name="getTableLogList">
+    </wsdl:input>
+      <wsdl:output message="tns:getTableLogListResponse" name="getTableLogListResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTableLogListforPengadaan">
+<wsdl:documentation>Get single data record by PK</wsdl:documentation>
+      <wsdl:input message="tns:getTableLogListforPengadaan" name="getTableLogListforPengadaan">
+    </wsdl:input>
+      <wsdl:output message="tns:getTableLogListforPengadaanResponse" name="getTableLogListforPengadaanResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTableLogByRoleVendor">
+<wsdl:documentation>Get single data record by PK</wsdl:documentation>
+      <wsdl:input message="tns:getTableLogByRoleVendor" name="getTableLogByRoleVendor">
+    </wsdl:input>
+      <wsdl:output message="tns:getTableLogByRoleVendorResponse" name="getTableLogByRoleVendorResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTableLogByRolePanitia">
+<wsdl:documentation>Get single data record by PK</wsdl:documentation>
+      <wsdl:input message="tns:getTableLogByRolePanitia" name="getTableLogByRolePanitia">
+    </wsdl:input>
+      <wsdl:output message="tns:getTableLogByRolePanitiaResponse" name="getTableLogByRolePanitiaResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAuditTrailListWithKeyword">
+<wsdl:documentation>Get single data record by PK</wsdl:documentation>
+      <wsdl:input message="tns:getAuditTrailListWithKeyword" name="getAuditTrailListWithKeyword">
+    </wsdl:input>
+      <wsdl:output message="tns:getAuditTrailListWithKeywordResponse" name="getAuditTrailListWithKeywordResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="TableLog00ServicesImplServiceSoapBinding" type="tns:TableLog00Services">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getTableLog">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getTableLog">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getTableLogResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTableLogByIdUser">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getTableLogByIdUser">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getTableLogByIdUserResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTableLogByUserId">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getTableLogByUserId">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getTableLogByUserIdResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTableLogListByPengadaanPk">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getTableLogListByPengadaanPk">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getTableLogListByPengadaanPkResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTableLogList">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getTableLogList">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getTableLogListResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTableLogListforPengadaan">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getTableLogListforPengadaan">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getTableLogListforPengadaanResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTableLogByRoleVendor">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getTableLogByRoleVendor">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getTableLogByRoleVendorResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTableLogByRolePanitia">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getTableLogByRolePanitia">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getTableLogByRolePanitiaResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAuditTrailListWithKeyword">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getAuditTrailListWithKeyword">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getAuditTrailListWithKeywordResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TableLog00ServicesImplService">
+    <wsdl:port binding="tns:TableLog00ServicesImplServiceSoapBinding" name="TableLog00ServicesImplPort">
+      <soap:address location="http://localhost:8080/ProMISE-Combiphar-WS/services/TableLog00Services"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
